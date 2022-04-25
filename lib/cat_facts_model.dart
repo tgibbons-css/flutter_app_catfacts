@@ -2,7 +2,7 @@
 //
 //     final user = userFromJson(jsonString);
 
-// json data drom https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=5
+// json data from https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=5
 // json to  dart class convertsion from https://app.quicktype.io/
 
 import 'dart:convert';
@@ -77,8 +77,8 @@ class Status {
     this.sentCount,
   });
 
-  bool verified;
-  int sentCount;
+  bool verified = false;
+  int sentCount = 0;
 
   factory Status.fromJson(Map<String, dynamic> json) => Status(
     verified: json["verified"] == null ? null : json["verified"],
